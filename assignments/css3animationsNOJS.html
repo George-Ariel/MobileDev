@@ -56,6 +56,24 @@
 }	
 
 	
+#runrun {
+  width: 100px;
+  height: 300px;
+  background-color: cyan;
+  position: relative;
+  animation-name: runrun;
+  animation-duration: 4s;
+  animation-iteration-count: 4;
+}
+
+@keyframes runrun {
+  0%   {background-color:cyan; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:violet; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+	
 	
 </style>
 </head>
@@ -75,6 +93,10 @@
 <h1>Animation Delay</h1>
 	
 <div id ="delay"></div>
+	
+<h1>Animation Running 4 Times</h1>
+	
+<div id ="runrun"></div>
 	
 	
 	
