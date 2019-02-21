@@ -8,7 +8,7 @@
 	<title></title>
 	
 <style> 
-div {
+#sunrise {
   width: 100px;
   height: 100px;
   background-color: red;
@@ -16,10 +16,32 @@ div {
   animation-duration: 4s;
 }
 
-@keyframes sunset {
+@keyframes sunrise {
   from {background-color: red;}
   to {background-color: yellow;}
 }
+	
+	
+#flashy {
+  width: 500px;
+  height: 100px;
+  background-color: red;
+  animation-name: flashy;
+  animation-duration: 4s;
+}	
+	
+@keyframes flashy {
+  0%   {background-color: red;}
+  25%  {background-color: magenta;}
+  50%  {background-color: blue;}
+  100% {background-color: olive;}
+}	
+	
+	
+	
+
+	
+	
 </style>
 </head>
 	
@@ -27,13 +49,13 @@ div {
 
 
 <body>
-<h1>Transition Property</h1>
+<h1>Box changes from Red to Yellow </h1>
 	
-<div id ="transition"></div>
+<div id ="sunrise"></div>
 
-<h1>Transition & Transform</h1>
+<h1>Color changes at Duration Percentage (over the course of 4 seconds) (0% / 25% / 50% / 100%) </h1>
 	
-<div id ="flippity"></div>
+<div id ="flashy"></div>
 	
 <h1>Transition Delay</h1>
 	
