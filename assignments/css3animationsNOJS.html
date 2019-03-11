@@ -11,7 +11,9 @@
 #sunrise {
   width: 100px;
   height: 100px;
-  background-color: red;
+  border-radius: 50%;
+  margin-left:25px;
+  background-color: yellow;
   animation-name: sunrise;
   animation-duration: 4s;
 }
@@ -21,23 +23,38 @@
   to {background-color: yellow;}
 }
 	
-	
-#flashy {
-  width: 500px;
-  height: 100px;
-  background-color: red;
+.flashyMoon {
+  position:absolute;
+  height:40px;
+  width:40px;
+  left:5%;
+  margin-left:75px;
+  top: 43%;
+  background:darkblue;
+  box-shadow: 5px 5px 0 0 darkgray;
+  border-radius: 50%;
   animation-name: flashy;
   animation-duration: 4s;
-}	
-	
+}
+.sky{
+  display:block;
+  height:150px;
+  width:250px;
+  position:relative;
+  animation-name: flashy;
+  background:darkblue;
+  animation-duration: 4s;
+}
+
+
 @keyframes flashy {
   0%   {background-color: red;}
   25%  {background-color: magenta;}
   50%  {background-color: blue;}
   100% {background-color: olive;}
 }	
-	
-	
+
+
 #delay {
   width: 100px;
   height: 100px;
@@ -82,16 +99,14 @@
 
 
 <body>
-<h1>Box changes from Red to Yellow </h1>
-	
+<h1>Sun changes from Red to Yellow </h1>
 <div id ="sunrise"></div>
 
-<h1>Color changes at Duration Percentage (over the course of 4 seconds) (0% / 25% / 50% / 100%) </h1>
-	
-<div id ="flashy"></div>
-	
+<h1>Sky color changes at Duration Percentage (over the course of 4 seconds) (0% / 25% / 50% / 100%) </h1>
+<div class ="sky"></div>
+<div class ="flashyMoon"></div>
+
 <h1>Animation Delay</h1>
-	
 <div id ="delay"></div>
 	
 <h1>Animation Running 4 Times</h1>
