@@ -29,7 +29,7 @@
   width:40px;
   left:5%;
   margin-left:75px;
-  top: 43%;
+  top: 53%;
   background:darkblue;
   box-shadow: 5px 5px 0 0 darkgray;
   border-radius: 50%;
@@ -62,6 +62,7 @@
   position: relative;
   animation-name: delay;
   animation-duration: 4s;
+  animation-delay: 4s;
 }
 
 @keyframes delay {
@@ -90,31 +91,26 @@
   75%  {background-color:green; left:0px; top:200px;}
   100% {background-color:red; left:0px; top:0px;}
 }
-	
-	
 </style>
 </head>
-	
-
-
 
 <body>
 <h1>Sun changes from Red to Yellow </h1>
 <div id ="sunrise"></div>
 
 <h1>Sky color changes at Duration Percentage (over the course of 4 seconds) (0% / 25% / 50% / 100%) </h1>
+<h2>refresh the page to see changes :)</h2>
 <div class ="sky"></div>
 <div class ="flashyMoon"></div>
 
 <h1>Animation Delay</h1>
+<h2>it delays 4 seconds then it drops down in a sqaure dance formation while changing colors</h2>
+<h2>refresh the page to see changes :)</h2>
 <div id ="delay"></div>
 	
 <h1>Animation Running 4 Times</h1>
-	
+<h2>refresh the page to see changes :)</h2>
 <div id ="runrun"></div>
-	
-	
-	
 
 	
 </body>
