@@ -8,14 +8,53 @@
 	<title></title>
 	
 <style> 
+body {
+  margin: 30px;
+  background-color: #E9E9E9;
+}
 
+.polaroid {
+  width: 284px;
+  padding: 20px 20px 30px 20px;
+  border: 1px solid #BFBFBF;
+  background-color: white;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+.rotate_right {
+  float: left;
+  transform: rotate(6deg);
+}
+
+.rotate_left {
+  float: left;
+  transform: rotate(-8deg);
+}
+
+.rotate_far_left {
+  float: left;
+  transform: rotate(12deg);
+  margin-top: 100px;
+}
 </style>
 </head>
 
 <body>
 <h1>Polaroids strewn on a table</h1>
-<div id ="sunrise"></div>
+<div class="polaroid rotate_right">
+        <img src="media/donuts.jpg" alt="randy's donuts" width="284" height="405">
+        <p class="caption">Road Trip</p>
+      </div>
 
+      <div class="polaroid rotate_left">
+        <img src="media/greenCar.jpg" alt="Monterosso's green car" width="284" height="405">
+        <p class="caption">Monterosso's green car</p>
+      </div>
+
+      <div class="polaroid rotate_far_left">
+            <img src="media/sk8trix.jpg" alt="Monterosso car in Venice" width="284" height="405">
+            <p class="caption">My boyfriend is cooler than yours</p>
+          </div>
 	
 </body>
 </html>
