@@ -1,0 +1,14 @@
+button {
+    background-color: maroon;
+    color:white;
+    line-height: 2em;
+}
+
+#toxic {
+    color: magenta;
+}
+
+p {
+    font-family: 'Special Elite', cursive;
+}
+
