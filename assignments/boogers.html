@@ -31,6 +31,18 @@ function sumAll() {
   return sum;
 }
 document.getElementById("math").innerHTML = sumAll(3, 68, 12, 95, 44, 102);
+
+
+// this is what an associative array looks like
+var o = new Object();
+o["one"] = 1;
+o["two"] = 2;
+o["three"] = 3;
+for(var i in o)
+{
+     document.write(i + "=" + o[i] + '<br>');
+}
+
 </script>
 </body>
 </html>
