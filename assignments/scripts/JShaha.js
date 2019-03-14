@@ -11,3 +11,10 @@ var persona = ["a","b","c"];
 //persona['c'] = "Donkey"; 
 document.getElementById("shrekMovies").innerHTML = persona;
 
+var lPeople = ["Lilo", "Stitch", "Nani", "Jumba", "Pleakley", "Cobra Bubbles"];
+var text = "";
+var i;
+for (i = 0; i < lPeople.length; i++) {
+    text += lPeople[i] + "<br>";
+}
+document.getElementById("liloStich").innerHTML = text;
