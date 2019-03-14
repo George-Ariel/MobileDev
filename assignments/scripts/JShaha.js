@@ -5,16 +5,13 @@ function beatlesWho() {
 }
 
 
-var persona = ["a","b","c"];
-//persona['a'] = "Shrek";
-//persona['b'] = "Fiona";
-//persona['c'] = "Donkey"; 
-document.getElementById("shrekMovies").innerHTML = persona;
-
-var lPeople = ["Lilo", "Stitch", "Nani", "Jumba", "Pleakley", "Cobra Bubbles"];
-var text = "";
-var i;
-for (i = 0; i < lPeople.length; i++) {
-    text += lPeople[i] + "<br>";
+function queHoraEs() {
+  var hour = new Date().getHours(); 
+  var greeting;
+  if (hour < 18) {
+    greeting = "Good day";
+  } else {
+    greeting = "Good evening";
+  }
+  document.getElementById("time").innerHTML = greeting;
 }
-document.getElementById("liloStich").innerHTML = text;
