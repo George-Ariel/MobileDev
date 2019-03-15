@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    <link rel="stylesheet" href="https://george-ariel.github.io/cit230/styles/normalize.css">
+    <title></title>
+</head>
+
+<body>
+    <h1 id="wowza"> GET RED-Y FOR... </h1>
+    <button type="button" onclick="document.getElementById('wowza').style.color = 'red'">COLOR ME</button>
+
+    <p id="sad">my FEELINGS</p>
+    <button onclick="feelin()">tears</button>
+
+    <p id="italic">i might be feeling a little down...</p>
+    <button onclick="italic()">slanted down</button>
+
+    <script>
+        function italic() {
+            document.getElementById("italic").style.fontStyle = "italic";
+        }
+
+        function feelin() {
+            document.getElementById('sad').style.color = "blue";
+        }
+    </script>
+
+</body>
+
+</html>
