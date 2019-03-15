@@ -1,0 +1,30 @@
+p, #yesss, button{
+    margin-left: 2em;
+}
+
+#nombre, #country, #save, #load, #wrong, #shrekC{
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+
+#nombre, #shrekC {
+    width: 20em;
+}
+
+#save, button, .please {
+    background: olive;
+}
+
+.please {
+    margin-top: 0;
+}
+
+h4 {
+    margin-top: 2em;
+    margin-left: 2em;
+}
+
+h1 {
+    margin-left: 1em;
+    color: olive;
+}

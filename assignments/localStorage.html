@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html lang="">
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
-	<link rel="stylesheet" href="https://george-ariel.github.io/cit230/styles/normalize.css">
-	<title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    <link rel="stylesheet" href="https://george-ariel.github.io/cit230/styles/normalize.css">
+    <link rel="stylesheet" href="styles/localstorage.css">
+    <title></title>
 </head>
 
 <body>
+    <script src="scripts/localstorage.js"></script>
 
-    
+    <h1>SHREK FAN CLUB</h1>
+    <h4>Hello. What is your name?</h4>
+    <input id="nombre" type="text" name="first" placeholder="Please enter your name">
+    <h4>Where are you from?</h4>
+    <input id="country" type="text" name="country" placeholder="Country of Origin">
+    <br>
+    <button onclick="aBout()">Submit</button>
+    <p id="showName"></p>
+
+    <h4>Out of the four Shrek movies, which character is your favorite?</h4>
+    <input type="text" id="shrekC" placeholder="Enter character's name here"value=""/><br />
+    <input type="button" id="save" value="I'm ready" onclick="save();" />
+    <br>
+    <h4>One final question - Are you ready to become a member of the Shrek Fan Club?</h4>
+    <input class ="please" type="button" id="load" value="Yes" onclick="load();" />
+    <input class ="please" type="button" id="wrong" value="No" onclick="wRONG();" /><br />
+    <div id="yesss"></div>
+
+
+
 </body>
+
 </html>
