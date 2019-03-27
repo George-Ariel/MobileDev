@@ -15,3 +15,6 @@ function queHoraEs() {
   }
   document.getElementById("time").innerHTML = greeting;
 }
+
+array={key1: 'value1',key2:'value2'}; 
+alert(array['key2']);
