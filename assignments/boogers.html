@@ -10,6 +10,21 @@
   <h2>JavaScript Arrays</h2>
   <p id="fiOna"></p>
 
+  <h3>Yet another FOR loop</h3>
+  <p id="math"></p>
+
+  <h3>a magical FOR IN loop</h3>
+  <p id=""></p>
+
+  <h3>a cool WHILE loop</h3>
+  <p id=""></p>
+
+  <h3>a DO WHILE loop! no way!</h3>
+  <p id=""></p>
+
+  <h3>associative array</h3>
+  <p id = "callforTears"></p>
+
 
   <script>
     var shreK = ["Shrek", "Fiona", "Donkey"];
@@ -32,17 +47,13 @@
       return sum;
     }
     document.getElementById("math").innerHTML = sumAll(3, 68, 12, 95, 44, 102);
-
-
-    // this is what an associative array looks like
-    var o = new Object();
-    o["one"] = 1;
-    o["two"] = 2;
-    o["three"] = 3;
-    for (var i in o) {
-      document.write(i + "=" + o[i] + '<br>');
-    }
-
+  
+  //associative array
+var lol = [];
+lol["index1"] = "am I happy??";
+lol["index2"] = "ALL the tears";
+document.getElementById("callforTears").innerHTML = lol.index2;
+  
   </script>
 </body>
 

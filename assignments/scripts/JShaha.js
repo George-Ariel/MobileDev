@@ -16,5 +16,3 @@ function queHoraEs() {
   document.getElementById("time").innerHTML = greeting;
 }
 
-array={key1: 'hmm this is interesting',key2:'this was made using an associative array'}; 
-alert(array['key2']);
