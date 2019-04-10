@@ -5,16 +5,17 @@ var x = document.getElementById("coordinates");
 
 function getLocation() {
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition, showError);
+    navigator.geolocation.getCurrentPosition(showError);
   } else { 
     x.innerHTML = "Geolocation is not supported by this browser.";
   }
 }
 
-function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
-}
+// showPosition, 
+// function showPosition(position) {
+//   x.innerHTML = "Latitude: " + position.coords.latitude + 
+//   "<br>Longitude: " + position.coords.longitude;
+// }
 
 
 // accounting for errors & users who have blocked their locations
@@ -47,6 +48,8 @@ function loadAPI() {
       if (this.readyState == 4 && this.status == 200) {
         bringWeather(this.responseText);
         // just to check --> console.log(JSON.parse(this.responseText));
+        position.coords.latitude
+        position.coords.longitude
 
       }
     };
