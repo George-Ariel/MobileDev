@@ -48,8 +48,9 @@ function loadAPI() {
       if (this.readyState == 4 && this.status == 200) {
         bringWeather(this.responseText);
         // just to check --> console.log(JSON.parse(this.responseText));
-        position.coords.latitude
-        position.coords.longitude
+        // position.coords.latitude
+        // position.coords.longitude
+        show yoself
 
       }
     };
