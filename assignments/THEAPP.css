@@ -7,3 +7,12 @@ body {
   background-color: yellow;
 }
 
+/*  typeface :   
+    font-family: 'Abel', sans-serif  
+*/
+
+
+h1, h3, h5 {
+  font-family: 'Abel', sans-serif;
+}
+
