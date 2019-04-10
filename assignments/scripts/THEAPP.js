@@ -68,7 +68,7 @@ function loadAPI() {
 
   //grabbing the current city from the user - text not coordinates omg why did i take a break
 
-localStorage.setItem("name", "uhhh");
-document.getElementById('input').value = localStorage.getItem("name");
+// localStorage.setItem("name", "uhhh");
+// document.getElementById('input').value = localStorage.getItem("name");
 
 
