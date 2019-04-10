@@ -5,17 +5,17 @@ var x = document.getElementById("coordinates");
 
 function getLocation() {
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showError);
+    navigator.geolocation.getCurrentPosition(showPosition,showError);
   } else { 
     x.innerHTML = "Geolocation is not supported by this browser.";
   }
 }
 
-// showPosition, 
-// function showPosition(position) {
-//   x.innerHTML = "Latitude: " + position.coords.latitude + 
-//   "<br>Longitude: " + position.coords.longitude;
-// }
+ 
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
 
 
 // accounting for errors & users who have blocked their locations
@@ -42,27 +42,27 @@ function showError(error) {
 
 
 //getting JSON information
-function loadAPI() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        bringWeather(this.responseText);
-        // just to check --> console.log(JSON.parse(this.responseText));
-        // position.coords.latitude
-        // position.coords.longitude
-        show yoself
+// function loadAPI() {
+//     var xhttp = new XMLHttpRequest();
+//     xhttp.onreadystatechange = function() {
+//       if (this.readyState == 4 && this.status == 200) {
+//         bringWeather(this.responseText);
+//         // just to check --> console.log(JSON.parse(this.responseText));
+//         // position.coords.latitude
+//         // position.coords.longitude
+//         show yoself
 
-      }
-    };
-    xhttp.open("GET", "http://api.openweathermap.org/data/2.5/forecast?APPID=d81576e3aa1511ba13c1f7f6157ccf2d&lat=35&lon=139", true);
-    xhttp.send();
-  }
+//       }
+//     };
+//     xhttp.open("GET", "http://api.openweathermap.org/data/2.5/forecast?APPID=d81576e3aa1511ba13c1f7f6157ccf2d&lat=35&lon=139", true);
+//     xhttp.send();
+//   }
 
-  //geting the specific weather "subpoint" from the JSON
-  function bringWeather(data) {
-    var wrrr = JSON.parse(data);
-    console.log(wrrr.list[0].weather[0].main);
-  }
+//   //geting the specific weather "subpoint" from the JSON
+//   function bringWeather(data) {
+//     var wrrr = JSON.parse(data);
+//     console.log(wrrr.list[0].weather[0].main);
+//   }
 
 
 
