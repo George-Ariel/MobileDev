@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>REFRESHED</title>
-    <script src="scripts/OHPOOP.js"></script>
+
     <link rel="stylesheet" href="THEAPP.css">
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
         <title >REFFRESHED</title>
@@ -17,6 +17,26 @@
 
 <p id="coordinates"></p>
 
+
+
+
+<script>
+    var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+</script>
 
 
   </body>
