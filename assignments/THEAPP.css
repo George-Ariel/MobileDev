@@ -16,3 +16,18 @@ h1, h3, h5, p {
   font-family: 'Abel', sans-serif;
 }
 
+
+div {
+  margin-bottom: 10px;
+}
+
+#hour, #minutes{
+  width: 4em;
+  background-color: beige;
+}
+
+/* #minutes {
+  width: 4em;
+} */
+
+

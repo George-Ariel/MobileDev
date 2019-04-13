@@ -10,34 +10,50 @@
   </head>
 
   <body>
+        <script src="scripts/OHPOOP.js"></script>
+        <h4>Time?</h4>
+          <div id="gimmeTime">
+            <input id="hour" type="number" placeholder="9" min="0" max="12" list="suggestHour" required>
+            <datalist id="suggestHour">
+                        <option value="1"></option>
+                        <option value="2"></option>
+                        <option value="3"></option>
+                        <option value="4"></option>
+                        <option value="5"></option>
+                        <option value="6"></option>
+                        <option value="7"></option>
+                        <option value="8"></option>
+                        <option value="9"></option>
+                        <option value="10"></option>
+                        <option value="11"></option>
+                        <option value="12"></option> 
+                        <!-- if you have more than 6 values in a drop down list, putting a close tag insures they all appear -->
+            </datalist>
+            <input id="minutes" type="number" placeholder="05" step="5" min="0" max="59" list="suggestMinutes" required>
+            <datalist id="suggestMinutes">
+                        <option value="00">
+                        <option value="15">
+                        <option value="30">
+                        <option value="45"></option>
+            </datalist>
+            <!-- 
 
-<p>Click the button to get your coordinates.</p>
+            am or pm
 
-<button onclick="getLocation()">Try It</button>
+            <input id="mm" type="number" placeholder="05" step="5" min="0" max="59" list="suggestMinutes" required>
+            <datalist id="suggestMinutes">
+                        <option value="00">
+                        <option value="15">
+                        <option value="30">
+                        <option value="45"></option>
+            </datalist> -->
+            <span class="validity"></span> <!-- trigger an alert that says "Please enter a time" -->
+          </div>
 
-<p id="coordinates"></p>
-
-
-
-
-<script>
-    var x = document.getElementById("demo");
-
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else { 
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
-}
-
-function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
-}
-
-</script>
+         <button onclick="storeTime(); disPlay();">calculate</button>
+         <p id="showEm"></p>
 
 
   </body>
 </html>
+
