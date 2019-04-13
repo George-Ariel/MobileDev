@@ -50,8 +50,21 @@
             <span class="validity"></span> <!-- trigger an alert that says "Please enter a time" -->
           </div>
 
-         <button onclick="storeTime(); disPlay();">calculate</button>
+          <select id="ampm">
+                <option>AM</option>
+                <option>PM</option>
+          </select>
+
+         <button onclick="storeTime(); disPlay(); cycleOne(); cycleTwo(); ">calculate</button>
          <p id="showEm"></p>
+
+
+         <li>
+             <ul id="cycle1"></ul>
+             <ul id="cycle2"></ul>
+             <ul id=""></ul>
+             <ul id=""></ul>
+         </li>
 
 
   </body>
