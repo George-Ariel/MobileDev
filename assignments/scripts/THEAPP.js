@@ -49,9 +49,9 @@ function sleepCalc(hours, mins, ampmFormat, change) {
   var minInHour = 60;
   var hrFormat = 12;
 
-  var maxValue = minInHour * hourBase;
+  var maxValue = minInHour * hrFormat;
   var timeInMins;
-  var newHour;
+  var finalHour;
 
   //normalize and find total time in minutes to make easier to solve
   if (hours === hrFormat) {
@@ -61,21 +61,30 @@ function sleepCalc(hours, mins, ampmFormat, change) {
     timeInMins = hours * minInHour + mins;
   }
 
+  var newTime = timeInMins + change;
 
-
-
-
-  //var wakeUp = (comBined - 630) / 60;
+  //works the magic - Math.floor() rounds a number downward and to the nearest integer
+  if (newTime >= 0) {
+      mins = newTime % minInHour;
+      if (Math.floor(newTime / minInHour) >= hrFormat) {
+        finalHour = Math.floor(newTime / minInHour) - hrFormat;
+      } else {
+        finalHour = Math.floor(newTime / minInHour);
+      }
+  } else {
+      mins = minInHour + newTime % minInHour;
+      finalHour = Math.floor((maxValue + (timeInMins + change)) / minInHour);
+  }
 
 //keep the 12hr format going 
-  if (newHour === 0) {
+  if (finalHour === 0) {
     hours = hrFormat;
   } else {
-    hours = newH;
+    hours = finalHour;
   }
 
 //display correct correspodning AM or PM
-  if ((change > 0 && newHour < hours) || (change < 0 && newHour > hours)) {
+  if ((change > 0 && finalHour < hours) || (change < 0 && finalHour > hours)) {
     if (ampmFormat == "AM") {
       ampmFormat = "PM";
     } else {
@@ -91,128 +100,8 @@ function sleepCalc(hours, mins, ampmFormat, change) {
 
 
 
-function fourCycles() {
 
 
-  var x = document.getElementById("ampm").selectedIndex;
-  // 0 = "AM" which makes the statement true
-  // 1 = "PM" which makes the statement false 
-  if (Boolean(x) == false) {
-    var hoursToMins = (h + 12) * 60; // Normalizing the hours to minutes 
-  } else {
-    var hoursToMins = h * 60;
-  }
-  var comBined = hoursToMins + m;
-  var wakeUp = (comBined - 360) / 60; // subtract 360 meaning FOUR cycles
-
-  //to get minutes
-  var chopExtra = wakeUp.toFixed(2);
-  var decimalToMins = chopExtra.toString();
-  var justDecimal = decimalToMins.slice(-3);
-  var justMinutes = parseFloat(justDecimal);
-  var finalMinutes = justMinutes * 60;
-
-  // to get hour
-  var finalHour = Math.floor(wakeUp);
-  if (finalHour > 12) {
-    var notMilitaryLol = finalHour - 12; // turning into 12hr format
-    var finalTime = notMilitaryLol + " : " + finalMinutes + "PM";
-    document.getElementById("cycle4").innerHTML = finalTime;
-  } else {
-    var finalTime = finalHour + " : " + finalMinutes + "AM";
-    document.getElementById("cycle4").innerHTML = finalTime;
-  }
-}
-
-function fiveCycles() {
-  var h = parseInt(localStorage.hour) // parseInt turns it into a useable number
-  var m = parseInt(localStorage.minutes)
-
-  var x = document.getElementById("ampm").selectedIndex;
-  // 0 = "AM" which makes the statement true
-  // 1 = "PM" which makes the statement false 
-  if (Boolean(x) == false) {
-    var hoursToMins = (h + 12) * 60; // Normalizing the hours to minutes 
-  } else {
-    var hoursToMins = h * 60;
-  }
-  var comBined = hoursToMins + m;
-  var wakeUp = (comBined - 450) / 60; // subtract 450 meaning FIVE cycles
-
-  //to get minutes
-  var chopExtra = wakeUp.toFixed(2);
-  var decimalToMins = chopExtra.toString();
-  var justDecimal = decimalToMins.slice(-3);
-  var justMinutes = parseFloat(justDecimal);
-  var finalMinutes = justMinutes * 60;
-
-  // to get hour
-  var finalHour = Math.floor(wakeUp);
-  if (finalHour > 12) {
-    var notMilitaryLol = finalHour - 12; // turning into 12hr format
-    var finalTime = notMilitaryLol + " : " + finalMinutes + "PM";
-    document.getElementById("cycle5").innerHTML = finalTime;
-  } else {
-    var finalTime = finalHour + " : " + finalMinutes + "AM";
-    document.getElementById("cycle5").innerHTML = finalTime;
-  }
-}
-
-function sixCycles() {
-  var h = parseInt(localStorage.hour) // parseInt turns it into a useable number
-  var m = parseInt(localStorage.minutes)
-
-  var x = document.getElementById("ampm").selectedIndex;
-  // 0 = "AM" which makes the statement true
-  // 1 = "PM" which makes the statement false 
-  if (Boolean(x) == false) {
-    var hoursToMins = (h + 12) * 60; // Normalizing the hours to minutes 
-  } else {
-    var hoursToMins = h * 60;
-  }
-  var comBined = hoursToMins + m;
-  var wakeUp = (comBined - 540) / 60; // subtract 540 meaning SIX cycles
-
-  //to get minutes
-  var chopExtra = wakeUp.toFixed(2);
-  var decimalToMins = chopExtra.toString();
-  var justDecimal = decimalToMins.slice(-3);
-  var justMinutes = parseFloat(justDecimal);
-  var finalMinutes = justMinutes * 60;
-
-  // to get hour
-  var finalHour = Math.floor(wakeUp);
-  if (finalHour > 12) {
-    var notMilitaryLol = finalHour - 12; // turning into 12hr format
-    var finalTime = notMilitaryLol + " : " + finalMinutes + "PM";
-    document.getElementById("cycle6").innerHTML = finalTime;
-  } else {
-    var finalTime = finalHour + " : " + finalMinutes + "AM";
-    document.getElementById("cycle6").innerHTML = finalTime;
-  }
-}
-
-function sevenCycles() {
-
-
-  //to get minutes
-  var chopExtra = wakeUp.toFixed(2);
-  var decimalToMins = chopExtra.toString();
-  var justDecimal = decimalToMins.slice(-3);
-  var justMinutes = parseFloat(justDecimal);
-  var finalMinutes = justMinutes * 60;
-
-  // to get hour
-  var finalHour = Math.floor(wakeUp);
-  if (finalHour > 12) {
-    var notMilitaryLol = finalHour - 12; // turning into 12hr format
-    var finalTime = notMilitaryLol + " : " + finalMinutes + "PM";
-    document.getElementById("cycle7").innerHTML = finalTime;
-  } else {
-    var finalTime = finalHour + " : " + finalMinutes + "AM";
-    document.getElementById("cycle7").innerHTML = finalTime;
-  }
-}
 
 
 
