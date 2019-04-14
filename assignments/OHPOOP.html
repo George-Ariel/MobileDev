@@ -36,17 +36,6 @@
                         <option value="30">
                         <option value="45"></option>
             </datalist>
-            <!-- 
-
-            am or pm
-
-            <input id="mm" type="number" placeholder="05" step="5" min="0" max="59" list="suggestMinutes" required>
-            <datalist id="suggestMinutes">
-                        <option value="00">
-                        <option value="15">
-                        <option value="30">
-                        <option value="45"></option>
-            </datalist> -->
             <span class="validity"></span> <!-- trigger an alert that says "Please enter a time" -->
           </div>
 
@@ -55,24 +44,16 @@
                 <option>PM</option>
           </select>
 
-         <button onclick="storeTime(); disPlay(); fourCycles(); fiveCycles(); ">calculate</button>
+         <button onclick="storeTime(); disPlay(); fourCycles(); fiveCycles(); sixCycles(); sevenCycles();">calculate</button>
          <p id="showEm"></p>
 
-
-         <button onclick="fourCycles();">Try it</button> 
-         <ul id="m"></ul>
-         <ul id="minutes"></ul>
-
-         <button onclick="clearStorage();">calculate again</button>
+         <button onclick="clearStorage(); form.reset();">calculate again</button>
 
          <li>
-
-             <ul id="cycle1"></ul>
-             <ul id="cycle2"></ul>
-             <ul id="cycle3"></ul>
              <ul id="cycle4"></ul>
              <ul id="cycle5"></ul>
              <ul id="cycle6"></ul>
+             <ul id="cycle7"></ul>
          </li>
 
 

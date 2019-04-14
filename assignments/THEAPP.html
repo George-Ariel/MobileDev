@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
   </head>
 
-  <body onload="loadAPI()">
+  <body>
 
 
     <title >REFFRESHED</title>
@@ -19,10 +19,55 @@
 
     <!-- fade into white and then fade into the main menu  -->
 
-
-
     <h3>What time do you need to wake up?</h3>
-    <!-- Spin dial thingy -->
+    <div id="gimmeTime">
+        <input id="hour" type="number" placeholder="9" min="0" max="12" list="suggestHour" required>
+        <datalist id="suggestHour">
+                    <option value="1"></option>
+                    <option value="2"></option>
+                    <option value="3"></option>
+                    <option value="4"></option>
+                    <option value="5"></option>
+                    <option value="6"></option>
+                    <option value="7"></option>
+                    <option value="8"></option>
+                    <option value="9"></option>
+                    <option value="10"></option>
+                    <option value="11"></option>
+                    <option value="12"></option> 
+                    <!-- if you have more than 6 values in a drop down list, putting a close tag insures they all appear -->
+        </datalist>
+        <input id="minutes" type="number" placeholder="05" step="5" min="0" max="59" list="suggestMinutes" required>
+        <datalist id="suggestMinutes">
+                    <option value="00">
+                    <option value="15">
+                    <option value="30">
+                    <option value="45"></option>
+        </datalist>
+        <span class="validity"></span> <!-- trigger an alert that says "Please enter a time" -->
+      </div>
+
+      <select id="ampm">
+            <option>AM</option>
+            <option>PM</option>
+      </select>
+
+     <button onclick="storeTime(); calcBedtime();">calculate</button>
+     <p id="wakeTime"></p>
+
+     <button onclick="clearStorage(); form.reset();">calculate again</button>
+
+<button onclick="showWeather()">weather</button>
+
+     <li>
+         <ul id="cycle4"></ul>
+         <ul id="cycle5"></ul>
+         <ul id="cycle6"></ul>
+         <ul id="cycle7"></ul>
+     </li>
+
+
+
     <button>Calculate Optimal Bed Time</button>
 
 
@@ -33,24 +78,12 @@
     <!-- Display a list of possible sleep times in blocks -->
 
 
-              <!-- information :
-          The average sleep cycle - 90 minutes long.
-          A typical night of sleep includes 5 full sleep cycles.
-          90 x 5 = 450 minutes, or 7.5 hours.
-          Starting at your wake time, work back 7.5 hours to find your bedtime.
 
-          6 cycles
 
-          7 cycles 
 
-          8 cycles
 
-          4 cycles
 
-          3 cycles
-
-              -->
-
+    
           <!-- calculate again with a buttom that triggers a clear() -->
 
 

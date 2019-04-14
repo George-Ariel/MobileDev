@@ -8,7 +8,7 @@ function storeTime() {
 
 
 function disPlay() {
-    var out = "If you go to sleep at " + localStorage.hour + " : " + localStorage.minutes + " here are the times we recommend you go to sleep at.";
+    var out = "If you want to wake up at " + localStorage.hour + " : " + localStorage.minutes + " here are the times we recommend you go to sleep at.";
     document.getElementById("showEm").innerHTML = out;
 }
 
@@ -29,13 +29,13 @@ function fourCycles() {
     var x = document.getElementById("ampm").selectedIndex;
     // 0 = "AM" which makes the statement true
     // 1 = "PM" which makes the statement false 
-    if (Boolean(x) == true) {
+    if (Boolean(x) == false) {
         var hoursToMins = (h + 12) * 60; // Normalizing the hours to minutes 
     } else {
         var hoursToMins = h * 60;
     }
     var comBined = hoursToMins + m;
-    var wakeUp = (comBined - 450) / 60; // subtract 90 meaning ONE cycle 
+    var wakeUp = (comBined - 360) / 60; // subtract 360 meaning FOUR cycles
 
     //to get minutes
     var chopExtra = wakeUp.toFixed(2);
@@ -49,10 +49,10 @@ function fourCycles() {
     if (finalHour > 12) {
         var notMilitaryLol = finalHour - 12; // turning into 12hr format
         var finalTime = notMilitaryLol + " : " + finalMinutes + "PM";
-        document.getElementById("cycle1").innerHTML = finalTime;
+        document.getElementById("cycle4").innerHTML = finalTime;
     } else {
         var finalTime = finalHour + " : " + finalMinutes + "AM";
-        document.getElementById("cycle1").innerHTML = finalTime;
+        document.getElementById("cycle4").innerHTML = finalTime;
     }
 }
 function fiveCycles() {
@@ -62,13 +62,13 @@ function fiveCycles() {
     var x = document.getElementById("ampm").selectedIndex;
     // 0 = "AM" which makes the statement true
     // 1 = "PM" which makes the statement false 
-    if (Boolean(x) == true) {
+    if (Boolean(x) == false) {
         var hoursToMins = (h + 12) * 60; // Normalizing the hours to minutes 
     } else {
         var hoursToMins = h * 60;
     }
     var comBined = hoursToMins + m;
-    var wakeUp = (comBined - 450) / 60; // subtract 90 meaning ONE cycle 
+    var wakeUp = (comBined - 450) / 60; // subtract 450 meaning FIVE cycles
 
     //to get minutes
     var chopExtra = wakeUp.toFixed(2);
@@ -82,10 +82,10 @@ function fiveCycles() {
     if (finalHour > 12) {
         var notMilitaryLol = finalHour - 12; // turning into 12hr format
         var finalTime = notMilitaryLol + " : " + finalMinutes + "PM";
-        document.getElementById("cycle1").innerHTML = finalTime;
+        document.getElementById("cycle5").innerHTML = finalTime;
     } else {
         var finalTime = finalHour + " : " + finalMinutes + "AM";
-        document.getElementById("cycle1").innerHTML = finalTime;
+        document.getElementById("cycle5").innerHTML = finalTime;
     }
 }
 function sixCycles() {
@@ -95,13 +95,13 @@ function sixCycles() {
     var x = document.getElementById("ampm").selectedIndex;
     // 0 = "AM" which makes the statement true
     // 1 = "PM" which makes the statement false 
-    if (Boolean(x) == true) {
+    if (Boolean(x) == false) {
         var hoursToMins = (h + 12) * 60; // Normalizing the hours to minutes 
     } else {
         var hoursToMins = h * 60;
     }
     var comBined = hoursToMins + m;
-    var wakeUp = (comBined - 450) / 60; // subtract 90 meaning ONE cycle 
+    var wakeUp = (comBined - 540) / 60; // subtract 540 meaning SIX cycles
 
     //to get minutes
     var chopExtra = wakeUp.toFixed(2);
@@ -115,10 +115,10 @@ function sixCycles() {
     if (finalHour > 12) {
         var notMilitaryLol = finalHour - 12; // turning into 12hr format
         var finalTime = notMilitaryLol + " : " + finalMinutes + "PM";
-        document.getElementById("cycle1").innerHTML = finalTime;
+        document.getElementById("cycle6").innerHTML = finalTime;
     } else {
         var finalTime = finalHour + " : " + finalMinutes + "AM";
-        document.getElementById("cycle1").innerHTML = finalTime;
+        document.getElementById("cycle6").innerHTML = finalTime;
     }
 }
 function sevenCycles() {
@@ -128,13 +128,13 @@ function sevenCycles() {
     var x = document.getElementById("ampm").selectedIndex;
     // 0 = "AM" which makes the statement true
     // 1 = "PM" which makes the statement false 
-    if (Boolean(x) == true) {
+    if (Boolean(x) == false) {
         var hoursToMins = (h + 12) * 60; // Normalizing the hours to minutes 
     } else {
         var hoursToMins = h * 60;
     }
     var comBined = hoursToMins + m;
-    var wakeUp = (comBined - 450) / 60; // subtract 90 meaning ONE cycle 
+    var wakeUp = (comBined - 630) / 60; // subtract 630 meaning SEVEN cycle 
 
     //to get minutes
     var chopExtra = wakeUp.toFixed(2);
@@ -148,40 +148,16 @@ function sevenCycles() {
     if (finalHour > 12) {
         var notMilitaryLol = finalHour - 12; // turning into 12hr format
         var finalTime = notMilitaryLol + " : " + finalMinutes + "PM";
-        document.getElementById("cycle1").innerHTML = finalTime;
+        document.getElementById("cycle7").innerHTML = finalTime;
     } else {
         var finalTime = finalHour + " : " + finalMinutes + "AM";
-        document.getElementById("cycle1").innerHTML = finalTime;
+        document.getElementById("cycle7").innerHTML = finalTime;
     }
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 //     alert("Please select an hour and a minute before trying to calculate!");
 
-
-
-
-
-// Starting at your wake time, work back 7.5 hours to find your bedtime.
-
-// 6 cycles
-
-// 7 cycles 
-
-// 8 cycles
-
-// 4 cycles // 
 
 function clearStorage() {
     localStorage.clear();
