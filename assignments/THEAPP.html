@@ -45,14 +45,14 @@
                     <option value="45"></option>
         </datalist>
         <span class="validity"></span> <!-- trigger an alert that says "Please enter a time" -->
-      </div>
 
       <select id="ampm">
             <option>AM</option>
             <option>PM</option>
       </select>
+    </div>
 
-     <button onclick="storeTime(); calcBedtime();">calculate</button>
+     <button onclick="storeTime(); calcBedtime();">Calculate Optimal Bed Time</button>
      <p id="wakeTime"></p>
 
      <button onclick="clearStorage(); form.reset();">calculate again</button>
@@ -60,20 +60,17 @@
 <button onclick="showWeather()">weather</button>
 
      <li>
-         <ul id="cycle4"></ul>
-         <ul id="cycle5"></ul>
-         <ul id="cycle6"></ul>
-         <ul id="cycle7"></ul>
+         <ul class="wakeTime"></ul>
+         <ul class="wakeTime"></ul>
+         <ul class="wakeTime"></ul>
+         <ul class="wakeTime"></ul>
      </li>
 
 
 
-    <button>Calculate Optimal Bed Time</button>
-
-
  <!-- fade into Bedtime screen  -->
     
-    <h3> If you go to slep at <span id="showTime"></span> here are the times we recommend you go to sleep at.</h3>
+    <h3> If you go to sleep at <span id="wakeTime"></span> here are the times we recommend you go to sleep at.</h3>
     <h5>In order to wake up feeling maximum REFRESHED we suggest one in ORANGE.</h5>
     <!-- Display a list of possible sleep times in blocks -->
 

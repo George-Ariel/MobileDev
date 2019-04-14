@@ -29,7 +29,7 @@ function calcBedtime() {
   var x = document.getElementById("ampm").selectedIndex;
   var y = document.getElementById("ampm").options;
   var ampmFormat = y[x].text;
-  document.getElementById("wakeTime").innerHTML = hours + " : " + mins + ampmFormat;
+  document.getElementsByClassName("wakeTime").innerHTML = hours + " : " + mins + ampmFormat;
 }
 
 // The average sleep cycle is 90 minutes long
@@ -96,14 +96,15 @@ function sleepCalc(hours, mins, ampmFormat, change) {
 }
 
 
-
-
-
-
-
-
-
-
+var startTimeArr = sleepCalc(hours, mins, ampmFormat, -timeToFallAsleep);
+var bedTime = document.getElementsByClassName('bedTime');
+for (var z = 0; z < bedTime.length; z++) {
+    startTimeArr = sleepCalc(startTimeArr[0], parseInt(startTimeArr[1]), startTimeArr[2], -cycle);
+    if (startTimeArr[1] < 10) {
+        startTimeArr[1] = "0" + startTimeArr[1];
+    }
+    bedTime[bedTime.length - 1 - z].innerHTML = startTimeArr[0] + ":" + startTimeArr[1] + " " + startTimeArr[2];
+}
 
 
 //     alert("Please select an hour and a minute before trying to calculate!");
