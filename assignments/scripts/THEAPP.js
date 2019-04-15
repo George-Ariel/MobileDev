@@ -105,11 +105,3 @@ for (var z = 0; z < bedTime.length; z++) {
     }
     bedTime[bedTime.length - 1 - z].innerHTML = startTimeArr[0] + ":" + startTimeArr[1] + " " + startTimeArr[2];
 }
-
-
-//     alert("Please select an hour and a minute before trying to calculate!");
-
-
-function clearStorage() {
-  localStorage.clear();
-}
