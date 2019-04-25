@@ -96,6 +96,7 @@ function sleepCalc(hours, mins, ampmFormat, change) {
 }
 
 
+// find out what time to wake up based off of going to sleep RIGHT NOW
 var startTimeArr = sleepCalc(hours, mins, ampmFormat, -timeToFallAsleep);
 var bedTime = document.getElementsByClassName('bedTime');
 for (var z = 0; z < bedTime.length; z++) {
