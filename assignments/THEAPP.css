@@ -15,19 +15,72 @@
 h1, h3, h5, p {
   font-family: 'Abel', sans-serif;
   color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+h1 {
+  font-size: 5em;
+  margin: 5px;
+}
+
+  h1.step1 {
+    color: red;
+  }
+
+  h1.step2 {
+    margin-bottom: 35px;
+    margin-top: 500px;
+  }
+
+h3 {
+  font-size: 2em;
+  margin: 10px;
+}
+
+  h3.step2 {
+    margin-bottom: 35px;
+  }
+
+h5 {
+  font-size: 1.4em;
+  margin: 5px;
 }
 
 
 div {
-  margin-bottom: 10px;
+  margin-bottom: 10%;
 }
 
 #hour, #minutes{
-  width: 4em;
+  width: 35%;
+  font-size: 130px;
   background-color: whitesmoke;
+  padding: .03em;
+
 }
 
-.img {
-  width: 15px;
-  height: 15px;
+#minutes{
+  width: 40%;
+}
+
+#ampm{
+  margin: 0;
+  position: absolute;               
+  top: 50%;                         
+  transform: translate(0, -50%);
+  height: 100%;
+  font-size: 100px;
+  color: whitesmoke;
+}
+
+input {
+  padding: 0;
+}
+
+#gimmeTime{
+  height: 10em;
+  position: relative;
 }

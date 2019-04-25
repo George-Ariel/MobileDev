@@ -1,76 +1,84 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>REFRESHED</title>
-    <script src="scripts/THEAPP.js"></script>
-    <link rel="stylesheet" href="THEAPP.css">
-    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
-  </head>
 
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>REFRESHED</title>
+  <script src="scripts/THEAPP.js"></script>
+  <link rel="stylesheet" href="THEAPP.css">
+  <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+</head>
+
+<body>
 
 
-    <title >REFFRESHED</title>
+  <title>REFFRESHED</title>
 
-    
-    <img src="media/REFRESHED-logo-01.png">
-    <h1>REFRESHED</h1>
+  <!-- STEP ONE - on load // intro to the app -->
+  <!-- 
+      <img src="media/REFRESHED-logo-01.png">
+      <h1 class="step1">REFRESHED</h1> 
+  -->
 
-    <!-- fade into white and then fade into the main menu  -->
-
-    <h3>What time do you need to wake up?</h3>
-    <div id="gimmeTime">
-        <input id="hour" class="trigger" type="number" placeholder="9" min="0" max="12" list="suggestHour" required>
-        <datalist id="suggestHour">
-                    <option value="1"></option>
-                    <option value="2"></option>
-                    <option value="3"></option>
-                    <option value="4"></option>
-                    <option value="5"></option>
-                    <option value="6"></option>
-                    <option value="7"></option>
-                    <option value="8"></option>
-                    <option value="9"></option>
-                    <option value="10"></option>
-                    <option value="11"></option>
-                    <option value="12"></option> 
-                    <!-- if you have more than 6 values in a drop down list, putting a close tag insures they all appear -->
-        </datalist>
-        <input id="minutes" type="number" placeholder="05" step="5" min="0" max="59" list="suggestMinutes" required>
-        <datalist id="suggestMinutes">
-                    <option value="00">
-                    <option value="15">
-                    <option value="30">
-                    <option value="45"></option>
-        </datalist>
-        <span class="validity"></span> <!-- trigger an alert that says "Please enter a time" -->
-
-      <select id="ampm">
-            <option>AM</option>
-            <option>PM</option>
-      </select>
-    </div>
-
-     <button onclick="storeTime(); calcBedtime();">Calculate Optimal Bed Time</button>
-     <p id="wakeTime"></p>
-
-<button onclick="showWeather()">weather</button>
-
-     <li>
-         <ul class="wakeTime"></ul>
-         <ul class="wakeTime"></ul>
-         <ul class="wakeTime"></ul>
-         <ul class="wakeTime"></ul>
-     </li>
+  <!-- fade into white and then fade into the main menu  -->
 
 
 
- <!-- fade into Bedtime screen  -->
-    
-    <h3> If you go to sleep at <span id="wakeTime"></span> here are the times we recommend you go to sleep at.</h3>
-    <h5>In order to wake up feeling maximum REFRESHED we suggest one in ORANGE.</h5>
-    <!-- Display a list of possible sleep times in blocks -->
+  <h1 class="step2">REFRESHED</h1>
+
+  <h3 class="step2">What time do you need to wake up?</h3>
+
+  <div id="gimmeTime">
+    <input id="hour" class="trigger" type="number" placeholder="09" min="0" max="12" list="suggestHour" required>
+    <datalist id="suggestHour">
+      <option value="01"></option>
+      <option value="02"></option>
+      <option value="03"></option>
+      <option value="04"></option>
+      <option value="05"></option>
+      <option value="06"></option>
+      <option value="07"></option>
+      <option value="08"></option>
+      <option value="09"></option>
+      <option value="10"></option>
+      <option value="11"></option>
+      <option value="12"></option>
+      <!-- if you have more than 6 values in a drop down list, putting a close tag insures they all appear -->
+    </datalist>
+    <input id="minutes" type="number" placeholder="05" step="5" min="0" max="59" list="suggestMinutes" required>
+    <datalist id="suggestMinutes">
+      <option value="00">
+      <option value="15">
+      <option value="30">
+      <option value="45"></option>
+    </datalist>
+    <span class="validity"></span> <!-- trigger an alert that says "Please enter a time" -->
+
+    <select id="ampm">
+      <option>AM</option>
+      <option>PM</option>
+    </select>
+  </div>
+
+  <button onclick="storeTime(); calcBedtime(); sleepCalc();">Calculate Optimal Bed Time</button>
+  <p id="wakeTime"></p>
+
+  <button onclick="showWeather()">weather</button>
+
+  <li>
+    <ul class="wakeTime"></ul>
+    <ul class="wakeTime"></ul>
+    <ul class="wakeTime"></ul>
+    <ul class="wakeTime"></ul>
+  </li>
+
+
+
+  <!-- fade into Bedtime screen  -->
+
+  <h3> If you go to sleep at <span id="wakeTime"> </span> here are the times we recommend you go to sleep at.</h3>
+  <h5>In order to wake up feeling maximum REFRESHED we suggest one in ORANGE.</h5>
+  <!-- Display a list of possible sleep times in blocks -->
 
 
 
@@ -78,13 +86,14 @@
 
 
 
-    
-          <!-- calculate again with a buttom that triggers a clear() -->
+
+  <!-- calculate again with a buttom that triggers a clear() -->
 
 
 
 
-    <!-- little weather icon???-->
+  <!-- little weather icon???-->
 
-  </body>
+</body>
+
 </html>
